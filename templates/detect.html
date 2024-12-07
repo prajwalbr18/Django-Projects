@@ -1,0 +1,196 @@
+{% extends "nav.html" %}
+{% block content%}
+{% load static %}
+
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding">
+    <div class="contact_bg_box">
+      <div class="img-box">
+        <img src="images/contact-bg.jpg" alt="">
+      </div>
+    </div>
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Get In touch
+        </h2>
+      </div>
+      <div class="">
+        <div class="row">
+          <div class="col-md-7 mx-auto">
+            <form method="post">
+                {% csrf_token %}
+              <div class="contact_form-container">
+                  <div>
+                    <input type="text" placeholder="V1:{{V1}}" name="v1" />
+                  </div>
+                  
+                  <div>
+                    <input type="text" placeholder="V2:{{V2}}" name="v2" />
+                  </div>
+                  <div>
+                    <input type="text" placeholder="V3:{{V3}}" name="v3" />
+                  </div>
+                  <div>
+                    <input type="text" placeholder="V4:{{V4}}" name="v4" />
+                  </div>
+                  <div>
+                    <input type="text" placeholder="V5:{{V5}}" name="v5" />
+                  </div>
+                  <div>
+                    <input type="text" placeholder="V6:{{V6}}" name="v6" />
+                  </div>
+                  <div>
+                    <input type="text" placeholder="V7:{{V7}}" name="v7" />
+                  </div>
+                  <div>
+                    <input type="text" placeholder="V8:{{V8}}" name="v8" />
+                  </div>
+                  <div>
+                    <input type="text" placeholder="V9:{{V9}}" name="v9" />
+                  </div>
+                  <div>
+                    <input type="text" placeholder="V10:{{V10}}" name="v10" />
+                  </div>
+                  <div>
+                    <input type="text" placeholder="detected output:{{credit}}" name="" />
+                  </div>
+                  
+                  <div class="btn-box ">
+                    <button type="submit">
+                      Detect
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_logo">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                TrustTrackers
+              </span>
+            </a>
+            <p>
+              Delivering confidence in every interaction
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_links">
+            <h5>
+              Support
+            </h5>
+            <ul>
+              <li>
+                <a href="">
+                  Login
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Developers
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Pricing
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  FAQs
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>
+              Contact Us
+            </h5>
+          </div>
+          <div class="info_contact">
+            <a href="" class="">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Electronic City
+              </span>
+            </a>
+            <a href="" class="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call : +91 9876234567
+              </span>
+            </a>
+            <a href="" class="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                trusttrackers@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_form ">
+            <h5>
+              Any Queries
+            </h5>
+            <form action="#">
+              <input type="email" placeholder="Enter your email">
+              <button>
+                Send
+              </button>
+            </form>
+            <div class="social_box">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+
+
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <p>
+       <span id="currentYear"></span> All Rights Reserved.
+      <a href="https://html.design/">TrustTrackers &copy; 2024 </a>
+    </p>
+  </footer>
+  {% for i in messages %}
+  <script>alert("{{i}}")</script>
+
+  {% endfor %}
+ 
+  {% endblock %}
